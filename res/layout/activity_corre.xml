@@ -16,12 +16,18 @@
         android:layout_height="wrap_content"
         android:hint="@string/TextView" />
     
+     <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
   
     <Switch 
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
   
+     <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
     
     <RadioGroup
         
@@ -50,6 +56,9 @@
             android:text="@string/radio30" />
             
     </RadioGroup>
+     <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
      
              <SeekBar 
                  android:id="@+id/seekBar2"
