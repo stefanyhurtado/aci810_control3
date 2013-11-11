@@ -18,12 +18,20 @@
         android:ems="10"
         android:hint="@string/editText1" />
     
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
+    
+    
      <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
      
-    
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
+     
    
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -51,12 +59,21 @@
             android:layout_height="wrap_content"
             android:text="@string/RadioButton2" />
     </RadioGroup>
-   
+   <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
+    
 
    <SeekBar
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+   
+   <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
+   
+   
      <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"

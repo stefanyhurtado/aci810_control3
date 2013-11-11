@@ -1,5 +1,6 @@
 package com.example.control3;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Switch;
 
+@SuppressLint("NewApi")
 public class MainActivity extends Activity {
 	
 	 public final static String NAME_VALUE = "com.example.control3.NAME_VALUE";
