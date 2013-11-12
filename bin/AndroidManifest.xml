@@ -23,12 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:parentActivityName="com.example.control3.MainActivity"
+            
             android:name="com.example.control3.CorreActivity"
             android:label="@string/title_activity_corre" >
         </activity>
         <activity
-             android:parentActivityName="com.example.control3.CorreActivity"
+           
             android:name="com.example.control3.SubmitActivity"
             android:label="@string/title_activity_submit" >
         </activity>

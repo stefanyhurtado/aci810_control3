@@ -42,7 +42,7 @@ public class CorreActivity extends Activity {
 		return true;
 	}
 	  public void onClickSubmit(View view){
-          Intent intent = new Intent(this,CorreActivity.class);
+          Intent intent = new Intent(this,SubmitActivity.class);
           
          
           RadioGroup rd= (RadioGroup)findViewById(R.id.radioGroup1);
