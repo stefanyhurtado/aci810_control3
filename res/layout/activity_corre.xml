@@ -25,44 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
   
-     <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dip" />
-    
-    <RadioGroup
-        
-        android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        
-        <RadioButton 
-            android:id="@+id/radio10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio10" />
-        
-        <RadioButton
-            
-             android:id="@+id/radio20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio20" />
-        
-              <RadioButton
-            
-             android:id="@+id/radio30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio30" />
-            
-    </RadioGroup>
-     <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dip" />
-     
-             <SeekBar 
-                 android:id="@+id/seekBar2"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 />
+   
+   
 </LinearLayout>

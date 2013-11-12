@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 	}
 	
 	   public void onClickSubmit(View view){
-           Intent intent = new Intent(this,Activity.class);
+           Intent intent = new Intent(this,CorreActivity.class);
            
            EditText nameEditText = (EditText) findViewById(R.id.editText1);
            String name = nameEditText.getText().toString();

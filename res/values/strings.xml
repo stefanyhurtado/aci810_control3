@@ -12,7 +12,7 @@
     <string name="name">Name</string>
     <string name="TextView">Name</string> 
     <string name="radio10">Radio Button 1</string>
-    <string name="radio20">Rdio Button 2</string>
+    <string name="radio20">Radio Button 2</string>
     <string name="radio30">Radio Button 3</string>
     
 </resources>
