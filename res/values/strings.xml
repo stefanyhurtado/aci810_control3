@@ -7,12 +7,15 @@
     <string name="RadioButton0">Radio Button1</string>
     <string name="RadioButton1">Radio Button2</string>
     <string name="RadioButton2">Radio Button3</string>
-    <string name="Button">Submit</string>
+    <string name="Button1">Next</string>
     <string name="title_activity_corre">CorreActivity</string>
+     <string name="Button">Submit</string>
     <string name="name">Name</string>
-    <string name="TextView">Name</string> 
+    <string name="TextView">Name</string>
     <string name="radio10">Radio Button 1</string>
     <string name="radio20">Radio Button 2</string>
     <string name="radio30">Radio Button 3</string>
-    
+    <string name="title_activity_submit">SubmitActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

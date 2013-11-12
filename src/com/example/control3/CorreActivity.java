@@ -3,61 +3,35 @@ package com.example.control3;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
-import android.widget.Switch;
-import android.widget.TextView;
 
 @SuppressLint("NewApi")
 public class CorreActivity extends Activity {
+	
+	
+	 public final static String RADIOGROUP_VALUE = "com.example.control3.RADIOGROUP_VALUE";
+     public final static String RADIOBUTTON0_VALUE = "com.example.control3.RADIOBUTTON0_VALUE";
+     public final static String RADIOBUTTON1_VALUE = "com.example.control3.RADIOBUTTON1_VALUE";
+     public final static String RADIOBUTTON2_VALUE = "com.example.control3.RADIOBUTTON2_VALUE";
+     public final static String SEEKBAR_VALUE = "com.example.control3.SEEKBAR_VALUE";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_corre);
 	
-		SharedPreferences sharedPref = getSharedPreferences("preferences",Context.MODE_PRIVATE);
 		
-		  String name = sharedPref.getString(MainActivity.NAME_VALUE, "not set");
-          Boolean swit_value = sharedPref.getBoolean(MainActivity.SWITCH_VALUE, false);
-          Boolean rButton1 = sharedPref.getBoolean(MainActivity.RADIOBUTTON0_VALUE, false);
-          Boolean rButton2 = sharedPref.getBoolean(MainActivity.RADIOBUTTON1_VALUE, false);
-          Boolean rButton3 = sharedPref.getBoolean(MainActivity.RADIOBUTTON2_VALUE, false);
-          int SeekBar = sharedPref.getInt(MainActivity.SEEKBAR_VALUE,0);  
-
-          TextView name1 = (TextView)findViewById (R.id.textView1);
-          name1.setText(name);
-          Switch swit1 = (Switch)findViewById(R.id.switch2);
-          swit1.setChecked(swit_value);
-          RadioButton rButs = (RadioButton)findViewById(R.id.radio10);
-          rButs.setChecked(rButton1);
-          RadioButton rButs1 = (RadioButton)findViewById(R.id.radio20);
-          rButs1.setChecked(rButton2);
-          RadioButton rButs2 = (RadioButton)findViewById(R.id.radio30);
-          rButs2.setChecked(rButton3);
-          SeekBar seekb = (SeekBar)findViewById(R.id.seekBar2);
-          seekb.setProgress(SeekBar);
-
-	
-          setupActionBar();
+		
+	}
           
           
-          
-    }
-
-
-    private void setupActionBar() {
-
-
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-    }
 
 	
 
@@ -67,22 +41,54 @@ public class CorreActivity extends Activity {
 		getMenuInflater().inflate(R.menu.corre, m);
 		return true;
 	}
-	 @Override
-     public boolean onOptionsItemSelected(MenuItem item) {
-             switch (item.getItemId()) {
-             case android.R.id.home:
-                     // This ID represents the Home or Up button. In the case of this
-                     // activity, the Up button is shown. Use NavUtils to allow users
-                     // to navigate up one level in the application structure. For
-                     // more details, see the Navigation pattern on Android Design:
-                     //
-                     // http://developer.android.com/design/patterns/navigation.html#up-vs-back
-                     //
-                     NavUtils.navigateUpFromSameTask(this);
-                     return true;
-             }
-             return super.onOptionsItemSelected(item);
-     }
+	  public void onClickSubmit(View view){
+          Intent intent = new Intent(this,CorreActivity.class);
+          
+         
+          RadioGroup rd= (RadioGroup)findViewById(R.id.radioGroup1);
+          int radg =  rd.getCheckedRadioButtonId();
+          RadioButton rbt0= (RadioButton)findViewById(R.id.radio10);
+          boolean rbutton0 = rbt0.isChecked();
+          RadioButton rbt1 = (RadioButton)findViewById(R.id.radio20);
+          boolean rbutton1 = rbt1.isChecked();
+          RadioButton rbt2 = (RadioButton)findViewById(R.id.radio30);
+          boolean rbutton2 = rbt2.isChecked();
+          SeekBar seekb = (SeekBar)findViewById(R.id.seekBar1);
+          int SeekBar = seekb.getProgress();
+
+
+
+
+          
+               
+          SharedPreferences sharedPref = getSharedPreferences("preferences",Context.MODE_PRIVATE);
+          
+          SharedPreferences.Editor editor = sharedPref.edit();
+          
+         
+          editor.putInt(RADIOGROUP_VALUE, radg);
+          editor.putBoolean(RADIOBUTTON0_VALUE, rbutton0);
+          editor.putBoolean(RADIOBUTTON1_VALUE, rbutton1);
+          editor.putBoolean(RADIOBUTTON2_VALUE, rbutton2);
+          editor.putInt(SEEKBAR_VALUE, SeekBar);
+
+
+        
+          
+          editor.commit();
+          startActivity(intent);
+
+
+
+
+          
+          
+          
+  }
+
+
 
 
 }
+
+
